@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Kufi+Arabic&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -39,7 +39,8 @@ table {
 td {
     width: 45px;
     height: 45px;
-    font-family: Jameel Noori Nastaleeq,Tahoma;
+    font-family: 'Noto Kufi Arabic',Jameel Noori Nastaleeq,Tahoma;
+    font-size: x-small;
     background: #f4f6ff;
     border-radius: 8px;
     text-align: center;
