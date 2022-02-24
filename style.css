@@ -32,3 +32,22 @@ textarea {
 button {
     cursor: pointer;
 }
+table {
+    margin: 0 auto;
+    direction: rtl;
+}
+td {
+    width: 45px;
+    height: 45px;
+    font-family: Jameel Noori Nastaleeq,Tahoma;
+    background: #f4f6ff;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+td span {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    font-size: xx-small;
+}

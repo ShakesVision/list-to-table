@@ -10,7 +10,7 @@ function generate() {
         if (c == n.value || c === 0) {
             tData += `<tr>`
         }
-        tData += `<td> ${items[i]} </td>`
+        tData += `<td> <span>${i+1}</span> ${items[i]} </td>`
         if (c == 1) {
             tData += `</tr>`
         }
@@ -25,5 +25,5 @@ function generate() {
 function clearFields() {
     output.innerHTML = n.value = txt.value = '';
 }
- 
+
 const copyToClipboard = (text) => navigator.clipboard?.writeText && navigator.clipboard.writeText(text);
