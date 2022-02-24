@@ -42,6 +42,7 @@ td {
     font-family: 'Noto Kufi Arabic',Jameel Noori Nastaleeq,Tahoma;
     font-size: x-small;
     background: #f4f6ff;
+    border: 1px solid #dce3ff;
     border-radius: 8px;
     text-align: center;
     position: relative;
