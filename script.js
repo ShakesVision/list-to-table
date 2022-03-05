@@ -40,7 +40,7 @@ function invertSelection() {
 }
 function copyValues() {
     console.log(selectedItems)    
-    val = (selectedItems.map(a => a.item));
+    val = (selectedItems.map(a => a.item)).join('\n');
     navigator.clipboard.writeText(val);
 }
 
