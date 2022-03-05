@@ -29,11 +29,16 @@ textarea {
     color: #212641;
 
 }
+input{
+    width: 60px;
+}
 button {
     cursor: pointer;
 }
-table {
+table.data-table {
     margin: 0 auto;
+}
+rtl {
     direction: rtl;
 }
 td {
@@ -46,10 +51,15 @@ td {
     border-radius: 8px;
     text-align: center;
     position: relative;
+    cursor: pointer;
 }
 td span {
     position: absolute;
     top: 2px;
     left: 2px;
     font-size: xx-small;
+}
+td.active {
+    background: #f1e3c2;
+    color: #212641;
 }

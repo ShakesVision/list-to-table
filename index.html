@@ -10,11 +10,20 @@
   </head>
   <body>
     <div class="controls">
-      <input type="number" class="column" />
+      <input type="number" class="column" value="10" />
       <textarea type="text" class="text"></textarea>
       <button class="submit" onclick="generate()">Generate</button>
       <button class="submit" onclick="clearFields()">Clear</button>
       <button class="submit" onclick="copyToClipboard(txt.value)">Copy</button>
+    </div>
+    <div class="secondary-controls">        
+      <button class="submit" onclick="selectAll()">Select All</button>
+      <button class="submit" onclick="deselectAll()">Deselect All</button>
+      <button class="submit" onclick="invertSelection()">Invert Selection</button>
+      <button class="submit" onclick="toggleTableDirection()">Toggle Direction</button>
+      <div class="selected">
+          Selected: <span class="selected-count"></span>
+      </div>
     </div>
     <div class="output"></div>
   </body>
