@@ -38,7 +38,7 @@ button {
 table.data-table {
     margin: 0 auto;
 }
-rtl {
+.rtl {
     direction: rtl;
 }
 td {

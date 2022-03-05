@@ -7,11 +7,11 @@ function generate() {
     let c = n.value;
     let tData = "";
     tData += `<table class='data-table rtl'>`
-    for (let i = 0; i < items.length; i++) {
+    for (var i = 0; i < items.length; i++) {
         if (c == n.value || c === 0) {
             tData += `<tr>`
         }
-        tData += `<td id="${i + 1}" onclick="highlightTd(${i + 1})"> <span>${i + 1}</span> ${items[i]} </td>`
+        tData += `<td id="${i + 1}" onclick="highlightTd(${i + 1},'${items[i]}')"> <span>${i + 1}</span> ${items[i]} </td>`
         if (c == 1) {
             tData += `</tr>`
         }
@@ -22,10 +22,11 @@ function generate() {
     output.innerHTML += `${tData}</table>`
 }
 
-function highlightTd(id) {
+function highlightTd(id,item) {
     document.getElementById(id).classList.toggle('active');
-    selectedItems.push(item);
-    // document.querySelector('.selected .selected-count').innerText = selectedItems.length;
+    let obj = selectedItems.find(v=>v.id === id);
+    document.getElementById(id).classList.contains('active')? selectedItems.push({id,item}): selectedItems.pop(obj);
+    document.querySelector('.selected .selected-count').innerText = selectedItems.length;    
 }
 
 function selectAll() {
@@ -36,6 +37,11 @@ function deselectAll() {
 }
 function invertSelection() {
     document.querySelectorAll('table td').forEach(t => t.classList.toggle('active'));
+}
+function copyValues() {
+    console.log(selectedItems)    
+    val = (selectedItems.map(a => a.item));
+    navigator.clipboard.writeText(val);
 }
 
 function clearFields() {
